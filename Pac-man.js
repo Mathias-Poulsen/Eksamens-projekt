@@ -4,4 +4,14 @@ function setup() {
 
 function draw() {
   background(220);
+  
+  //arena
+  
+  //spøgelser
+  
+  //pac-man
+  
+  //point
+  
+  //power-ups
 }
