@@ -27,22 +27,7 @@ function keyPressed() {
     }
 }
 
-function Snake() {
-  this.x = 0;
-  this.y = 0;
-  this.xspeed = 1;
-  this.yspeed = 0;
 
-  this.update = function() {
-    this.x = this.x + this.xspeed;
-    this.y = this.y + this.yspeed;
-  }
-
-  this.show = function() {
-    fill(200,255,100);
-    rect(this.x, this.y,10,10);
-  }
-}
 
 //Snake.js
 
@@ -60,6 +45,24 @@ function Snake(){
     this.update = function() {
       this.x = this.x + this.xspeed;
       this.y = this.y + this.yspeed;
+      
+      if(this.x < 0){
+      this.x = this.x + width;
+      
+      }
+      
+      else if(this.x > width){
+      this.x = this.x - width;
+      }
+      
+      else if(this.y < 0){
+      this.y = this.y + height;
+      
+      }
+      
+      else if(this.y > height){
+      this.y = this.y - height;
+      }
     }
     
     this.show = function() {
